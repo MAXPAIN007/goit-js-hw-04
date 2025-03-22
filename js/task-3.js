@@ -2,10 +2,10 @@ const profile = {
   username: "Jacob",
   playTime: 300,
   changeUsername: function (newName) {
-    profile.username = newName;
+    this.username = newName;
   },
   updatePlayTime: function (hours) {
-    profile.playTime += Number(hours);
+    this.playTime += Number(hours);
   },
   getInfo: function () {
     return `Username: ${this.username} has ${this.playTime} active hours!`;

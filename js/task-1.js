@@ -1,17 +1,13 @@
 //variant 1
 function isEnoughCapacity(products, containerSize) {
-  if (Object.keys(products).length === 0) {
-    return false;
+  let totalValue = 0;
+  for (const key in products) {
+    totalValue += products[key];
+  }
+  if (totalValue <= containerSize) {
+    return true;
   } else {
-    let totalValue = 0;
-    for (const key in products) {
-      totalValue += products[key];
-    }
-    if (totalValue <= containerSize) {
-      return true;
-    } else {
-      return false;
-    }
+    return false;
   }
 }
 
